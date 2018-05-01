@@ -2,15 +2,27 @@
   <div class="bottle_index">
     <div class="bottle_index_nav">
       <div class="switch_box">
-        <i class="iconfont icon-paihangbang- ranking_item"></i>
+        <router-link tag="i" to="/ranking" class="iconfont icon-paihangbang- ranking_item"></router-link>
         <van-tabs v-model="active" swipeable>
           <van-tab v-for="(item,indexs) in title" :title="item.name" :key="indexs">
             <div class="nav_tab" :style="{height:height_item}">
               <div class="nav_tab_img" v-show="indexs === 0">
-                <img src="../../common/images/p1-1c.jpg" alt="">
+                <img src="../../common/images/p1-1c.jpg" alt="" class="nav_img_icon">
+                <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_01">
+                <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_02">
+                <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_03">
+                <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_04">
+                <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_05">
+                <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_06">
               </div>
               <div class="nav_tab_img" v-show="indexs === 1">
-                <img src="../../common/images/p1-2c.jpg" alt="">
+                <img src="../../common/images/p1-2c.jpg" alt="" class="nav_img_icon">
+                <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_01">
+                <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_02">
+                <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_03">
+                <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_04">
+                <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_05">
+                <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_06">
               </div>
             </div>
           </van-tab>
@@ -125,11 +137,54 @@
           width: 100%
           .nav_tab_img {
             height: 100%
-            img {
+            position: relative
+            .nav_img_icon {
               width: 100%
               height: 100%
               vertical-align: top
               border: none
+            }
+            .bottle_icon_01 {
+              position: absolute
+              top: 400px
+              left: 250px
+              width: 95px
+              height: 95px
+            }
+            .bottle_icon_02 {
+              position: absolute
+              top: 430px
+              left: 490px
+              width: 95px
+              height: 95px
+            }
+            .bottle_icon_03 {
+              position: absolute
+              top: 560px
+              left: 110px
+              width: 95px
+              height: 95px
+            }
+            .bottle_icon_04 {
+              position: absolute
+              top: 575px
+              left: 330px
+              width: 95px
+              height: 95px
+            }
+            .bottle_icon_05 {
+              position: absolute
+              top: 730px
+              left: 150px
+              width: 95px
+              height: 95px
+            }
+            .bottle_icon_06 {
+              position: absolute
+              top: 710px
+              left: 470px
+              width: 95px
+              height: 95px
             }
           }
         }

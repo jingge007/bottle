@@ -31,7 +31,7 @@
   .footers_box {
     border-top-1px(#DCDCDE)
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     background-color: #FAFAFA;
