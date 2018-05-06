@@ -8,12 +8,15 @@
             <div class="nav_tab" :style="{height:height_item}">
               <div class="nav_tab_img" v-show="indexs === 0">
                 <img src="../../common/images/p1-1c.jpg" alt="" class="nav_img_icon">
-                <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_01">
+                <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_01" @click="pickUp_bottle">
                 <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_02">
                 <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_03">
                 <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_04">
                 <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_05">
                 <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_06">
+                <span class="nav_tab_icon">
+                  <img src="../../common/images/edit_btn.png" alt="">
+                </span>
               </div>
               <div class="nav_tab_img" v-show="indexs === 1">
                 <img src="../../common/images/p1-2c.jpg" alt="" class="nav_img_icon">
@@ -23,6 +26,9 @@
                 <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_04">
                 <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_05">
                 <img src="../../common/images/bottle_icon.png" alt="" class="bottle_icon_06">
+                <span class="nav_tab_icon">
+                  <img src="../../common/images/edit_btn.png" alt="">
+                </span>
               </div>
             </div>
           </van-tab>
@@ -30,7 +36,8 @@
         <i class="iconfont icon-40" @click="popup_boxs"></i>
       </div>
     </div>
-    <van-popup v-model="show">
+    <!--性别筛选弹窗-->
+    <van-popup v-model="showItem" class="sex_box">
       <ul class="popup_boxs_item">
         <li
           class="popup_boxs_item_txt"
@@ -42,6 +49,18 @@
         </li>
       </ul>
     </van-popup>
+
+    <!--捡瓶子弹窗-->
+    <van-popup v-model="pickbottle" class="pick_box">
+      <h2 class="pick_box_title">世界瓶</h2>
+      <div class="pick_information">
+        <img src="../../common/images/avatar.jpg" alt="" class="pick_header">
+        <div class="pick_navItem">
+          <h2 class="pick_navItem_title">话不多说</h2>
+
+        </div>
+      </div>
+    </van-popup>
   </div>
 </template>
 
@@ -51,7 +70,8 @@
       return {
         active: 2,
         height_item: '',
-        show: false,
+        showItem: false,
+        pickbottle: false,
         genderIndex: 0,
         title: [
           {name: '世界瓶'},
@@ -71,11 +91,14 @@
     },
     methods: {
       popup_boxs() {
-        this.show = true
+        this.showItem = true
       },
       genderFun(index) {
         this.genderIndex = index
-        this.show = false
+        this.showItem = false
+      },
+      pickUp_bottle() {
+        this.pickbottle = true
       }
     }
   }
@@ -150,6 +173,7 @@
               left: 250px
               width: 95px
               height: 95px
+              animation: move_bottle_01 4.5s infinite;
             }
             .bottle_icon_02 {
               position: absolute
@@ -157,6 +181,7 @@
               left: 490px
               width: 95px
               height: 95px
+              animation: move_bottle_02 3.8s infinite;
             }
             .bottle_icon_03 {
               position: absolute
@@ -164,6 +189,7 @@
               left: 110px
               width: 95px
               height: 95px
+              animation: move_bottle_03 3.2s infinite;
             }
             .bottle_icon_04 {
               position: absolute
@@ -171,6 +197,7 @@
               left: 330px
               width: 95px
               height: 95px
+              animation: move_bottle_04 5s infinite;
             }
             .bottle_icon_05 {
               position: absolute
@@ -178,6 +205,7 @@
               left: 150px
               width: 95px
               height: 95px
+              animation: move_bottle_05 3.3s infinite;
             }
             .bottle_icon_06 {
               position: absolute
@@ -185,6 +213,25 @@
               left: 470px
               width: 95px
               height: 95px
+              animation: move_bottle_05 4.1s infinite;
+            }
+            .nav_tab_icon {
+              position: absolute
+              right 60px
+              bottom 150px
+              width 100px
+              height: 100px
+              border-radius 50%
+              overflow: hidden
+              display: inline-block
+              img {
+                width: 100%
+                height: 100%
+                vertical-align: middle
+              }
+            }
+            .move_bollte_img {
+
             }
           }
         }
@@ -202,25 +249,124 @@
       }
     }
     /deep/ .van-popup {
-      width: 60%
       border-radius 8px
       background-color: #fff
     }
-    .popup_boxs_item {
-      border-bottom-1px(#D1D3D3)
-      .popup_boxs_item_txt {
-        height: 70px
-        line-height: 70px
-        padding-left 30px
+    .sex_box {
+      width: 60% !important
+      .popup_boxs_item {
+        border-bottom-1px(#D1D3D3)
+        .popup_boxs_item_txt {
+          height: 70px
+          line-height: 70px
+          padding-left 30px
+          font-size 28px
+          color #333
+        }
+        &:last-child {
+          border-bottom-1px(transparent)
+        }
+        .screen_centent_item_bs {
+          color: #CC0C08;
+        }
+      }
+    }
+    .pick_box {
+      width: 85%
+      border-radius 5px !important
+      padding 10px 10px 20px 10px
+      .pick_box_title {
+        height: 60px
+        width: 30%
+        border-radius 50%
+        line-height: 60px
+        position: absolute
+        top -30px
+        left: 50%
+        transform translateX(-50%)
+        border 2px solid #E3F9FF
+        background-color: #fff
+        text-align: center
+        color #56D7FA
         font-size 28px
-        color #333
       }
-      &:last-child {
-        border-bottom-1px(transparent)
+      .pick_information {
+        background-color: #E3F9FF
+        border-radius 5px
+        min-height: 350px
+        padding 35px 25px 20px 25px
+        .pick_header {
+          width: 85px
+          height: 85px
+          border-radius 50%
+          overflow: hidden
+          margin-right 20px
+          float left
+        }
+        .pick_navItem {
+          padding-top 15px
+          overflow: hidden
+          .pick_navItem_title {
+            color #000000
+            font-size 25px
+            display: block
+          }
+        }
       }
-      .screen_centent_item_bs {
-        color: #CC0C08;
-      }
+    }
+  }
+
+  @keyframes move_bottle_01 {
+    0%, 50%, 100% {
+      top: 400px
+    }
+    25%, 75% {
+      top: 390px
+    }
+  }
+
+  @keyframes move_bottle_02 {
+    0%, 50%, 100% {
+      top: 430px
+    }
+    25%, 75% {
+      top: 420px
+    }
+  }
+
+  @keyframes move_bottle_03 {
+    0%, 50%, 100% {
+      top: 560px
+    }
+    25%, 75% {
+      top: 550px
+    }
+  }
+
+  @keyframes move_bottle_04 {
+    0%, 50%, 100% {
+      top: 575px
+    }
+    25%, 75% {
+      top: 565px
+    }
+  }
+
+  @keyframes move_bottle_05 {
+    0%, 50%, 100% {
+      top: 730px
+    }
+    25%, 75% {
+      top: 720px
+    }
+  }
+
+  @keyframes move_bottle_06 {
+    0%, 50%, 100% {
+      top: 710px
+    }
+    25%, 75% {
+      top: 700px
     }
   }
 </style>

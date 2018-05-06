@@ -9,49 +9,73 @@
         <van-tab v-for="(item,index) in ranking_title" :title="item.title" :key="index">
           <!--魅力总榜-->
           <div class="ranking_box_center"
-               v-for="items_01 in ranking_center_01"
+               v-for="(items_01,idx_item_01) in ranking_center_01"
                v-show="index === 0"
           >
             <img :src="items_01.img" alt="" class="header_items">
             <div class="center_box_items">
               <h2 class="items_name">{{items_01.name}}</h2>
               <p class="items_nums">{{items_01.charm_num}}</p>
+              <div class="ranking_icon">
+                <img src="../../common/images/one_icon.png" alt="" v-show="idx_item_01 === 0">
+                <img src="../../common/images/two_icon.png" alt="" v-show="idx_item_01 === 1">
+                <img src="../../common/images/three_icon.jpg" alt="" v-show="idx_item_01 === 2">
+                <span class="ranking_icon_id" v-show="idx_item_01>=3">{{idx_item_01+1}}</span>
+              </div>
             </div>
           </div>
 
           <!--财富总榜-->
           <div class="ranking_box_center"
-               v-for="items_02 in ranking_center_02"
+               v-for="(items_02,idx_item_02) in ranking_center_02"
                v-show="index === 1"
           >
             <img :src="items_02.img" alt="" class="header_items">
             <div class="center_box_items">
               <h2 class="items_name">{{items_02.name}}</h2>
               <p class="items_nums">{{items_02.charm_num}}</p>
+              <div class="ranking_icon">
+                <img src="../../common/images/one_icon.png" alt="" v-show="idx_item_02 === 0">
+                <img src="../../common/images/two_icon.png" alt="" v-show="idx_item_02 === 1">
+                <img src="../../common/images/three_icon.jpg" alt="" v-show="idx_item_02 === 2">
+                <span class="ranking_icon_id" v-show="idx_item_02>=3">{{idx_item_02+1}}</span>
+              </div>
             </div>
           </div>
 
           <!--魅力日榜-->
           <div class="ranking_box_center"
-               v-for="items_03 in ranking_center_03"
+               v-for="(items_03,idx_item_03) in ranking_center_03"
                v-show="index === 2"
           >
             <img :src="items_03.img" alt="" class="header_items">
             <div class="center_box_items">
               <h2 class="items_name">{{items_03.name}}</h2>
               <p class="items_nums">{{items_03.charm_num}}</p>
+              <div class="ranking_icon">
+                <img src="../../common/images/one_icon.png" alt="" v-show="idx_item_03 === 0">
+                <img src="../../common/images/two_icon.png" alt="" v-show="idx_item_03 === 1">
+                <img src="../../common/images/three_icon.jpg" alt="" v-show="idx_item_03 === 2">
+                <span class="ranking_icon_id" v-show="idx_item_03>=3">{{idx_item_03+1}}</span>
+              </div>
             </div>
           </div>
 
           <!--财富日榜-->
           <div class="ranking_box_center"
-               v-for="items_04 in ranking_center_04"
+               v-for="(items_04,idx_item_04) in ranking_center_04"
                v-show="index === 3"
           >
             <img :src="items_04.img" alt="" class="header_items">
             <div class="center_box_items">
               <h2 class="items_name">{{items_04.name}}</h2>
               <p class="items_nums">{{items_04.charm_num}}</p>
+              <div class="ranking_icon">
+                <img src="../../common/images/one_icon.png" alt="" v-show="idx_item_04 === 0">
+                <img src="../../common/images/two_icon.png" alt="" v-show="idx_item_04 === 1">
+                <img src="../../common/images/three_icon.jpg" alt="" v-show="idx_item_04 === 2">
+                <span class="ranking_icon_id" v-show="idx_item_04>=3">{{idx_item_04+1}}</span>
+              </div>
             </div>
           </div>
         </van-tab>
@@ -76,60 +100,60 @@
           {
             img: './static/avatar.jpg',
             name: '小爷笑01',
-            charm_num: '1250'
+            charm_num: '累计魅力值：2510'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑01',
-            charm_num: '1250'
+            charm_num: '累计魅力值：2510'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑一下',
-            charm_num: '1250'
+            charm_num: '累计魅力值：2510'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑01',
-            charm_num: '1250'
+            charm_num: '累计魅力值：2510'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑01',
-            charm_num: '1250'
+            charm_num: '累计魅力值：2510'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑01',
-            charm_num: '1250'
+            charm_num: '累计魅力值：2510'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑01',
-            charm_num: '1250'
+            charm_num: '累计魅力值：2510'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑01',
-            charm_num: '1250'
+            charm_num: '累计魅力值：2510'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑01',
-            charm_num: '1250'
+            charm_num: '累计魅力值：2510'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑01',
-            charm_num: '1250'
+            charm_num: '累计魅力值：2510'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑01',
-            charm_num: '1250'
+            charm_num: '累计魅力值：2510'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑01',
-            charm_num: '1250'
+            charm_num: '累计魅力值：2510'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑01',
-            charm_num: '1250'
+            charm_num: '累计魅力值：2510'
           }
 
 
@@ -138,27 +162,43 @@
           {
             img: './static/avatar.jpg',
             name: '小爷笑02',
-            charm_num: '1250'
+            charm_num: '累计财富值：6666'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑02',
-            charm_num: '1250'
+            charm_num: '累计财富值：6666'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑02',
-            charm_num: '1250'
+            charm_num: '累计财富值：6666'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑02',
-            charm_num: '1250'
+            charm_num: '累计财富值：6666'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑02',
-            charm_num: '1250'
+            charm_num: '累计财富值：6666'
+          }, {
+            img: './static/avatar.jpg',
+            name: '小爷笑02',
+            charm_num: '累计财富值：6666'
+          }, {
+            img: './static/avatar.jpg',
+            name: '小爷笑02',
+            charm_num: '累计财富值：6666'
+          }, {
+            img: './static/avatar.jpg',
+            name: '小爷笑02',
+            charm_num: '累计财富值：6666'
+          }, {
+            img: './static/avatar.jpg',
+            name: '小爷笑02',
+            charm_num: '累计财富值：6666'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑02',
@@ -166,32 +206,16 @@
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑02',
-            charm_num: '1250'
+            charm_num: '累计财富值：6666'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑02',
-            charm_num: '1250'
-          }, {
-            img: './static/avatar.jpg',
-            name: '小爷笑02',
-            charm_num: '1250'
-          }, {
-            img: './static/avatar.jpg',
-            name: '小爷笑02',
-            charm_num: '1250'
-          }, {
-            img: './static/avatar.jpg',
-            name: '小爷笑02',
-            charm_num: '1250'
-          }, {
-            img: './static/avatar.jpg',
-            name: '小爷笑02',
-            charm_num: '1250'
+            charm_num: '累计财富值：6666'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑02',
-            charm_num: '1250'
+            charm_num: '累计财富值：6666'
           }
 
 
@@ -200,27 +224,35 @@
           {
             img: './static/avatar.jpg',
             name: '小爷笑03',
-            charm_num: '1250'
+            charm_num: '日魅力值：2222'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑03',
-            charm_num: '1250'
+            charm_num: '日魅力值：2222'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑03',
-            charm_num: '1250'
+            charm_num: '日魅力值：2222'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑03',
-            charm_num: '1250'
+            charm_num: '日魅力值：2222'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑03',
-            charm_num: '1250'
+            charm_num: '日魅力值：2222'
+          }, {
+            img: './static/avatar.jpg',
+            name: '小爷笑03',
+            charm_num: '日魅力值：2222'
+          }, {
+            img: './static/avatar.jpg',
+            name: '小爷笑03',
+            charm_num: '日魅力值：2222'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑03',
@@ -228,32 +260,24 @@
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑03',
-            charm_num: '1250'
+            charm_num: '日魅力值：2222'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑03',
-            charm_num: '1250'
+            charm_num: '日魅力值：2222'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑03',
-            charm_num: '1250'
+            charm_num: '日魅力值：2222'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑03',
-            charm_num: '1250'
-          }, {
-            img: './static/avatar.jpg',
-            name: '小爷笑03',
-            charm_num: '1250'
-          }, {
-            img: './static/avatar.jpg',
-            name: '小爷笑03',
-            charm_num: '1250'
+            charm_num: '日魅力值：2222'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑一下',
-            charm_num: '1250'
+            charm_num: '日魅力值：2222'
           }
 
 
@@ -262,60 +286,60 @@
           {
             img: './static/avatar.jpg',
             name: '小爷笑04',
-            charm_num: '1250'
+            charm_num: '日财富值：888'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑04',
-            charm_num: '1250'
+            charm_num: '日财富值：888'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑04',
-            charm_num: '1250'
+            charm_num: '日财富值：888'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑04',
-            charm_num: '1250'
+            charm_num: '日财富值：888'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑04',
-            charm_num: '1250'
+            charm_num: '日财富值：888'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑04',
-            charm_num: '1250'
+            charm_num: '日财富值：888'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑04',
-            charm_num: '1250'
+            charm_num: '日财富值：888'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑04',
-            charm_num: '1250'
+            charm_num: '日财富值：888'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑04',
-            charm_num: '1250'
+            charm_num: '日财富值：888'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑04',
-            charm_num: '1250'
+            charm_num: '日财富值：888'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑04',
-            charm_num: '1250'
+            charm_num: '日财富值：888'
           }, {
             img: './static/avatar.jpg',
             name: '小爷笑04',
-            charm_num: '1250'
+            charm_num: '日财富值：888'
           },
           {
             img: './static/avatar.jpg',
             name: '小爷笑04',
-            charm_num: '1250'
+            charm_num: '日财富值：888'
           }
 
 
@@ -396,16 +420,33 @@
         .center_box_items {
           flex 1
           margin-left 30px
+          position: relative
           .items_name {
             color #333333
-            font-size 28px
+            font-size 30px
             font-weight 600
             margin-bottom 15px
           }
           .items_nums {
-            font-size 26px
+            font-size 28px
             color #666666
-
+          }
+          .ranking_icon {
+            width: 100px
+            position absolute
+            top: 50%
+            transform translateY(-50%)
+            right: 0
+            text-align: center
+            img {
+              width: 100%
+              height: 100%
+              vertical-align: middle
+            }
+            .ranking_icon_id {
+              font-size 30px
+              color #646464
+            }
           }
         }
       }

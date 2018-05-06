@@ -46,8 +46,8 @@
         padding-top: 10px
         text-align: center;
         .footer_box_img {
-          width: 55px
-          height: 60px
+          width: 45px
+          height: 45px
           display: inline-block;
         }
         .footer_box_txt {
